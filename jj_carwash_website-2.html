@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>J&J Carwash and Detailing</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f8f9fa; color: #333; }
+    header { background-color: #003366; color: white; padding: 40px 20px; text-align: center; }
+    header h1 { margin: 0; font-size: 2.5em; }
+    header p { font-size: 1.2em; }
+    section { padding: 40px 20px; max-width: 1000px; margin: auto; }
+    .services ul { list-style-type: none; padding: 0; }
+    .services li { background: #e0e0e0; margin: 10px 0; padding: 15px; border-radius: 8px; }
+    .contact, .booking { background: #f1f1f1; border-radius: 8px; padding: 20px; margin-top: 20px; }
+    a.button {
+      display: inline-block;
+      padding: 12px 25px;
+      margin-top: 10px;
+      background-color: #003366;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    #language-toggle { position: absolute; top: 10px; right: 20px; background: white; padding: 10px; border-radius: 5px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div id="language-toggle" onclick="toggleLanguage()">Español</div>
+
+  <header>
+    <h1 id="title">J&J Carwash and Detailing</h1>
+    <p id="tagline">Your car clean and shiny wherever you are</p>
+  </header>
+
+  <section class="services">
+    <h2 id="services-title">Services</h2>
+    <ul id="services-list">
+      <li>Ceramic Coating</li>
+      <li>Paint Protection</li>
+      <li>Engine Cleaning</li>
+      <li>Headlight Polishing</li>
+      <li>Interior and Exterior Detailing</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 id="about-title">About Us</h2>
+    <p id="about-text">J&J Carwash and Detailing is a professional mobile service operating in Wesley Chapel and surrounding areas. We specialize in interior and exterior detailing, paint protection, and more. We come to you for your convenience.</p>
+  </section>
+
+  <section class="booking">
+    <h2 id="booking-title">Book an Appointment</h2>
+    <p id="booking-text">Easily schedule your appointment using the link below:</p>
+    <a class="button" href="https://form.jotform.com/241665239055155" target="_blank" id="booking-button">Schedule Appointment</a>
+  </section>
+
+  <section class="contact">
+    <h2 id="contact-title">Contact</h2>
+    <p><strong>Phone:</strong> <a href="tel:7867936339">786-793-6339</a></p>
+    <p><strong>Email:</strong> <a href="mailto:mobilecarwashjj@gmail.com">mobilecarwashjj@gmail.com</a></p>
+    <p><strong>Service Area:</strong> Wesley Chapel and surrounding areas</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 J&J Carwash and Detailing. All rights reserved.</p>
+  </footer>
+
+  <script>
+    let isSpanish = false;
+    function toggleLanguage() {
+      isSpanish = !isSpanish;
+      document.getElementById('language-toggle').innerText = isSpanish ? 'English' : 'Español';
+
+      document.getElementById('title').innerText = isSpanish ? 'J&J Carwash and Detailing' : 'J&J Carwash and Detailing';
+      document.getElementById('tagline').innerText = isSpanish ? 'Tu auto limpio y reluciente donde estés' : 'Your car clean and shiny wherever you are';
+      document.getElementById('services-title').innerText = isSpanish ? 'Servicios' : 'Services';
+      document.getElementById('services-list').innerHTML = isSpanish
+        ? '<li>Recubrimiento cerámico</li><li>Protección de pintura</li><li>Limpieza del motor</li><li>Pulido de faros</li><li>Detallado interior y exterior</li>'
+        : '<li>Ceramic Coating</li><li>Paint Protection</li><li>Engine Cleaning</li><li>Headlight Polishing</li><li>Interior and Exterior Detailing</li>';
+      document.getElementById('about-title').innerText = isSpanish ? '¿Quiénes somos?' : 'About Us';
+      document.getElementById('about-text').innerText = isSpanish
+        ? 'J&J Carwash and Detailing es un servicio móvil profesional que opera en Wesley Chapel y alrededores. Nos especializamos en detallado interior y exterior, protección de pintura y más. Vamos a ti para mayor comodidad.'
+        : 'J&J Carwash and Detailing is a professional mobile service operating in Wesley Chapel and surrounding areas. We specialize in interior and exterior detailing, paint protection, and more. We come to you for your convenience.';
+      document.getElementById('booking-title').innerText = isSpanish ? 'Agendar una cita' : 'Book an Appointment';
+      document.getElementById('booking-text').innerText = isSpanish
+        ? 'Agenda tu cita fácilmente usando el siguiente enlace:'
+        : 'Easily schedule your appointment using the link below:';
+      document.getElementById('booking-button').innerText = isSpanish ? 'Agendar cita' : 'Schedule Appointment';
+      document.getElementById('contact-title').innerText = isSpanish ? 'Contacto' : 'Contact';
+    }
+  </script>
+</body>
+</html>
