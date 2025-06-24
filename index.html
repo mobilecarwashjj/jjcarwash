@@ -41,16 +41,16 @@
     <p id="tagline">Your car clean and shiny wherever you are</p>
   </header>
 
+  
   <section class="services">
-    <h2 id="services-title">Services</h2>
+    <h2 id="services-title">Servicios Extras</h2>
     <ul id="services-list">
-      <li>Ceramic Coating</li>
-      <li>Paint Protection</li>
-      <li>Engine Cleaning</li>
-      <li>Headlight Polishing</li>
-      <li>Interior and Exterior Detailing</li>
+      <li>Pulido de faros</li>
+      <li>Eliminación de olores</li>
+      <li>Remover window tint</li><li>Aplicación de cera</li>
     </ul>
   </section>
+
 
   <section>
     <h2>Detallado Básico</h2>
@@ -89,13 +89,56 @@
     <p><em>Los precios pueden variar según las condiciones y circunstancias del vehículo.</em></p>
   </section>
 
-  <section class="booking">
-    <h2 id="booking-title">Book an Appointment</h2>
-    <p id="booking-text">Easily schedule your appointment using the link below:</p>
-    <a class="button" href="https://form.jotform.com/251664414585159" target="_blank" id="booking-button">Schedule Appointment</a>
+  
+
+  
+  <section>
+    <h2 style="text-align:center;">Detallado Básico</h2>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+
+      <div style="flex: 1; min-width: 250px; max-width: 300px; background: #e0e0e0; padding: 20px; border-radius: 10px;">
+        <h3>🚗 Sedanes</h3>
+        <ul>
+          <li>Aspirado de asientos y alfombras</li>
+          <li>Limpieza completa interior y exterior</li>
+          <li>Vestido interior (plásticos, consola, puertas)</li>
+          <li>Ambientador (opcional)</li>
+          <li>Detalle exterior (llantas, vidrios, acabado brillante)</li>
+        </ul>
+        <p><strong>💵 Precio inicial: $90</strong></p>
+        <a class="button" href="https://form.jotform.com/251664414585159" target="_blank">Agendar Cita</a>
+      </div>
+
+      <div style="flex: 1; min-width: 250px; max-width: 300px; background: #e0e0e0; padding: 20px; border-radius: 10px;">
+        <h3>🚙 SUV</h3>
+        <ul>
+          <li>Aspirado de asientos y alfombras</li>
+          <li>Limpieza completa interior y exterior</li>
+          <li>Vestido interior (plásticos, consola, puertas)</li>
+          <li>Ambientador (opcional)</li>
+          <li>Detalle exterior (llantas, vidrios, acabado brillante)</li>
+        </ul>
+        <p><strong>💵 Precio inicial: $120</strong></p>
+        <a class="button" href="https://form.jotform.com/251664414585159" target="_blank">Agendar Cita</a>
+      </div>
+
+      <div style="flex: 1; min-width: 250px; max-width: 300px; background: #e0e0e0; padding: 20px; border-radius: 10px;">
+        <h3>🚚 Camiones</h3>
+        <ul>
+          <li>Aspirado de asientos y alfombras</li>
+          <li>Limpieza completa interior y exterior</li>
+          <li>Vestido interior (plásticos, consola, puertas)</li>
+          <li>Ambientador (opcional)</li>
+          <li>Detalle exterior (llantas, vidrios, acabado brillante)</li>
+        </ul>
+        <p><strong>💵 Precio inicial: $150</strong></p>
+        <a class="button" href="https://form.jotform.com/251664414585159" target="_blank">Agendar Cita</a>
+      </div>
+
+    </div>
   </section>
 
-  <section class="contact">
+<section class="contact">
     <h2 id="contact-title">Contact</h2>
     <p><strong>Phone:</strong> <a href="tel:7867936339">786-793-6339</a></p>
     <p><strong>Email:</strong> <a href="mailto:mobilecarwashjj@gmail.com">mobilecarwashjj@gmail.com</a></p>
@@ -116,8 +159,8 @@
       document.getElementById('tagline').innerText = isSpanish ? 'Tu auto limpio y reluciente donde estés' : 'Your car clean and shiny wherever you are';
       document.getElementById('services-title').innerText = isSpanish ? 'Servicios' : 'Services';
       document.getElementById('services-list').innerHTML = isSpanish
-        ? '<li>Recubrimiento cerámico</li><li>Protección de pintura</li><li>Limpieza del motor</li><li>Pulido de faros</li><li>Detallado interior y exterior</li>'
-        : '<li>Ceramic Coating</li><li>Paint Protection</li><li>Engine Cleaning</li><li>Headlight Polishing</li><li>Interior and Exterior Detailing</li>';
+        ? '<li>Pulido de faros</li><li>Eliminación de olores</li><li>Remover window tint</li><li>Aplicación de cera</li><li>Aplicación de cera</li>'
+        : '<li>Headlight Polishing</li><li>Odor Removal</li><li>Window Tint Removal</li><li>Wax Application</li>';
       document.getElementById('about-title').innerText = isSpanish ? '¿Quiénes somos?' : 'About Us';
       document.getElementById('about-text').innerText = isSpanish
         ? 'J&J Carwash and Detailing es un servicio móvil profesional que opera en Wesley Chapel y alrededores. Nos especializamos en detallado interior y exterior, protección de pintura y más. Vamos a ti para mayor comodidad.'
