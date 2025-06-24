@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>J&J Carwash and Detailing</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #111; color: #fff; }
+    header { background: #003366; text-align: center; padding: 40px 20px; }
+    header h1 { margin: 0; font-size: 2.5em; }
+    header p { margin-top: 10px; font-size: 1.2em; }
+
+    #language-toggle {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      padding: 10px 15px;
+      background: white;
+      color: black;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+      background: #000;
+    }
+
+    .card {
+      background-size: cover;
+      background-position: center;
+      width: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 400px;
+      position: relative;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .card-content {
+      position: relative;
+      padding: 20px;
+      z-index: 1;
+    }
+
+    .card h3, .card ul, .card p, .card a {
+      margin: 0 0 10px 0;
+      color: white;
+    }
+
+    .card ul {
+      padding-left: 20px;
+    }
+
+    .card a {
+      background: orange;
+      color: black;
+      padding: 10px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+    }
+
+    section.services {
+      padding: 40px 20px;
+    }
+
+    section.services h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .services ul {
+      list-style-type: none;
+      padding: 0;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .services li {
+      background: #333;
+      margin: 10px 0;
+      padding: 12px;
+      border-radius: 5px;
+    }
+
+    .contact {
+      background: #222;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      background: #003366;
+      padding: 15px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <div id="language-toggle" onclick="toggleLanguage()">Español</div>
+
+  <header>
+    <h1 id="title">J&J Carwash and Detailing</h1>
+    <p id="tagline">Your car clean and shiny wherever you are</p>
+  </header>
+
+  <section class="cards">
+    <div class="card" style="background-image: url('https://cdn.pixabay.com/photo/2017/03/27/14/56/auto-2179220_1280.jpg');">
+      <div class="card-content">
+        <h3 id="sedan-title">Sedans - Basic Detail</h3>
+        <ul>
+          <li id="s1">Vacuum seats and carpets</li>
+          <li id="s2">Complete cleaning</li>
+          <li id="s3">Interior dressing (plastic, console, doors)</li>
+          <li id="s4">Air freshener (optional)</li>
+          <li id="s5">Exterior detail (wheels, glass, shine)</li>
+        </ul>
+        <p id="price1-label">Starting at: $90</p>
+        <a id="book1" href="https://form.jotform.com/251664414585159" target="_blank">Book Now</a>
+      </div>
+    </div>
+
+    <div class="card" style="background-image: url('https://cdn.pixabay.com/photo/2015/01/19/13/51/car-604019_1280.jpg');">
+      <div class="card-content">
+        <h3 id="suv-title">SUV - Basic Detail</h3>
+        <ul>
+          <li id="s6">Vacuum seats and carpets</li>
+          <li id="s7">Complete cleaning</li>
+          <li id="s8">Interior dressing (plastic, console, doors)</li>
+          <li id="s9">Air freshener (optional)</li>
+          <li id="s10">Exterior detail (wheels, glass, shine)</li>
+        </ul>
+        <p>Starting at: $120</p>
+        <a href="https://form.jotform.com/251664414585159" target="_blank">Book Now</a>
+      </div>
+    </div>
+
+    <div class="card" style="background-image: url('https://cdn.pixabay.com/photo/2016/07/05/17/47/pickup-truck-1495760_1280.jpg');">
+      <div class="card-content">
+        <h3 id="truck-title">Trucks - Basic Detail</h3>
+        <ul>
+          <li id="s11">Vacuum seats and carpets</li>
+          <li id="s12">Complete cleaning</li>
+          <li id="s13">Interior dressing (plastic, console, doors)</li>
+          <li id="s14">Air freshener (optional)</li>
+          <li id="s15">Exterior detail (wheels, glass, shine)</li>
+        </ul>
+        <p>Starting at: $150</p>
+        <a href="https://form.jotform.com/251664414585159" target="_blank">Book Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="services">
+    <h2 id="extras-title">Extra Services</h2>
+    <ul>
+      <li id="x1">Headlight Polishing</li>
+      <li id="x2">Odor Removal</li>
+      <li id="x3">Window Tint Removal</li>
+      <li id="x4">Wax Application</li>
+    </ul>
+  </section>
+
+  <section class="contact">
+    <h2 id="contact-title">Contact</h2>
+    <p><strong>Phone:</strong> <a href="tel:7867936339">786-793-6339</a></p>
+    <p><strong>Email:</strong> <a href="mailto:mobilecarwashjj@gmail.com">mobilecarwashjj@gmail.com</a></p>
+    <p><strong>Service Area:</strong> Wesley Chapel and surrounding areas</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 J&J Carwash and Detailing. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleLanguage() {
+      const isSpanish = document.getElementById("language-toggle").innerText === "Español";
+      document.getElementById("language-toggle").innerText = isSpanish ? "English" : "Español";
+      document.getElementById("title").innerText = "J&J Carwash and Detailing";
+      document.getElementById("tagline").innerText = isSpanish ? "Tu auto limpio y reluciente donde estés" : "Your car clean and shiny wherever you are";
+      document.getElementById("sedan-title").innerText = isSpanish ? "Sedanes - Detallado Básico" : "Sedans - Basic Detail";
+      document.getElementById("suv-title").innerText = isSpanish ? "SUV - Detallado Básico" : "SUV - Basic Detail";
+      document.getElementById("truck-title").innerText = isSpanish ? "Camiones - Detallado Básico" : "Trucks - Basic Detail";
+      document.getElementById("price1-label").innerText = isSpanish ? "Precio inicial:" : "Starting at:";
+
+      const servicesEN = ["Vacuum seats and carpets", "Complete cleaning", "Interior dressing (plastic, console, doors)", "Air freshener (optional)", "Exterior detail (wheels, glass, shine)"];
+      const servicesES = ["Aspirado de asientos y alfombras", "Limpieza completa", "Vestido interior (plásticos, consola, puertas)", "Ambientador (opcional)", "Detalle exterior (llantas, vidrios, brillo)"];
+
+      for (let i = 1; i <= 15; i++) {
+        const el = document.getElementById("s" + i);
+        if (el) el.innerText = isSpanish ? servicesES[(i - 1) % 5] : servicesEN[(i - 1) % 5];
+      }
+
+      document.getElementById("extras-title").innerText = isSpanish ? "Servicios Extras" : "Extra Services";
+      document.getElementById("x1").innerText = isSpanish ? "Pulido de faros" : "Headlight Polishing";
+      document.getElementById("x2").innerText = isSpanish ? "Eliminación de olores" : "Odor Removal";
+      document.getElementById("x3").innerText = isSpanish ? "Remover window tint" : "Window Tint Removal";
+      document.getElementById("x4").innerText = isSpanish ? "Aplicación de cera" : "Wax Application";
+      document.getElementById("contact-title").innerText = isSpanish ? "Contacto" : "Contact";
+    }
+  </script>
+</body>
+</html>
