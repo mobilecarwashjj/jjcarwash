@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,7 +46,7 @@
       justify-content: center;
       gap: 20px;
       padding: 40px 20px;
-      background: #fff; /* fondo blanco detrás de las tarjetas */
+      background: #fff;
     }
 
     .card {
@@ -174,7 +173,7 @@
           <p id="price1-label">Starting at: $90</p>
         </div>
         <div>
-          <a href="https://form.jotform.com/251664414585159?car_type=Sedan" target="_blank">Book Now</a>
+          <a id="book1" href="https://form.jotform.com/251664414585159?car_type=Sedan" target="_blank">Book Now</a>
           <p id="disclaimer1" class="disclaimer">Prices are subject to change depending on the vehicle’s condition and circumstances.</p>
         </div>
       </div>
@@ -200,7 +199,7 @@
       </div>
     </div>
 
-   <div class="card" style="background-image: url('truck.jpg');">
+    <div class="card" style="background-image: url('truck.jpg');">
       <div class="card-content">
         <div>
           <h3 id="truck-title">Trucks - Basic Detail</h3>
@@ -252,26 +251,29 @@
       document.getElementById("suv-title").innerText = isSpanish ? "SUV - Detallado Básico" : "SUV - Basic Detail";
       document.getElementById("truck-title").innerText = isSpanish ? "Camiones - Detallado Básico" : "Trucks - Basic Detail";
       document.getElementById("price1-label").innerText = isSpanish ? "Precio inicial: $90" : "Starting at: $90";
-
+      document.getElementById("book1").innerText = isSpanish ? "Reservar ahora" : "Book Now";
+      const links = document.querySelectorAll(".card a");
+      links.forEach(link => {
+        if (link.innerText === "Book Now" || link.innerText === "Reservar ahora") {
+          const url = new URL(link.href);
+          const carType = url.searchParams.get("car_type");
+          link.innerText = isSpanish ? "Reservar ahora" : "Book Now";
+          link.href = `https://form.jotform.com/251664414585159?car_type=${carType}`;
+        }
+      });
       const servicesEN = ["Vacuum seats and carpets", "Complete cleaning", "Interior dressing (plastic, console, doors)", "Air freshener (optional)", "Exterior detail (wheels, glass, shine)"];
       const servicesES = ["Aspirado de asientos y alfombras", "Limpieza completa", "Vestido interior (plásticos, consola, puertas)", "Ambientador (opcional)", "Detalle exterior (llantas, vidrios, brillo)"];
-
       for (let i = 1; i <= 15; i++) {
         const el = document.getElementById("s" + i);
         if (el) el.innerText = isSpanish ? servicesES[(i - 1) % 5] : servicesEN[(i - 1) % 5];
       }
-
       document.getElementById("extras-title").innerText = isSpanish ? "Servicios Extras" : "Extra Services";
       document.getElementById("x1").innerText = isSpanish ? "Pulido de faros" : "Headlight Polishing";
       document.getElementById("x2").innerText = isSpanish ? "Eliminación de olores" : "Odor Removal";
-      document.getElementById("x3").innerText = isSpanish ? "Remover window tint" : "Window Tint Removal";
+      document.getElementById("x3").innerText = isSpanish ? "Remover polarizado" : "Window Tint Removal";
       document.getElementById("x4").innerText = isSpanish ? "Aplicación de cera" : "Wax Application";
       document.getElementById("contact-title").innerText = isSpanish ? "Contacto" : "Contact";
-
-      const disclaimerText = isSpanish
-        ? "Los precios están sujetos a cambios dependiendo de las condiciones y circunstancias del vehículo."
-        : "Prices are subject to change depending on the vehicle’s condition and circumstances.";
-
+      const disclaimerText = isSpanish ? "Los precios están sujetos a cambios dependiendo de las condiciones y circunstancias del vehículo." : "Prices are subject to change depending on the vehicle’s condition and circumstances.";
       document.getElementById("disclaimer1").innerText = disclaimerText;
       document.getElementById("disclaimer2").innerText = disclaimerText;
       document.getElementById("disclaimer3").innerText = disclaimerText;
@@ -279,4 +281,3 @@
   </script>
 </body>
 </html>
-
