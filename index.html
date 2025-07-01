@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,7 +39,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 400px;
+      height: 420px;
       position: relative;
     }
 
@@ -73,6 +72,12 @@
       text-decoration: none;
       border-radius: 5px;
       display: inline-block;
+    }
+
+    .card .disclaimer {
+      font-size: 0.8em;
+      margin-top: -5px;
+      margin-bottom: 10px;
     }
 
     section.services {
@@ -132,6 +137,7 @@
           <li id="s5">Exterior detail (wheels, glass, shine)</li>
         </ul>
         <p id="price1-label">Starting at: $90</p>
+        <p id="disclaimer1" class="disclaimer">Los precios están sujetos a cambios dependiendo de las condiciones y circunstancias del vehículo.</p>
         <a id="book1" href="https://form.jotform.com/251664414585159" target="_blank">Book Now</a>
       </div>
     </div>
@@ -147,11 +153,12 @@
           <li id="s10">Exterior detail (wheels, glass, shine)</li>
         </ul>
         <p>Starting at: $120</p>
+        <p id="disclaimer2" class="disclaimer">Los precios están sujetos a cambios dependiendo de las condiciones y circunstancias del vehículo.</p>
         <a href="https://form.jotform.com/251664414585159" target="_blank">Book Now</a>
       </div>
     </div>
 
-    <div class="card" style="background-image: url('https://cdn.pixabay.com/photo/2016/07/05/17/47/pickup-truck-1495760_1280.jpg');">
+    <div class="card" style="background-image: url('https://cdn.pixabay.com/photo/2018/04/12/12/24/pickup-3318768_1280.jpg');">
       <div class="card-content">
         <h3 id="truck-title">Trucks - Basic Detail</h3>
         <ul>
@@ -162,6 +169,7 @@
           <li id="s15">Exterior detail (wheels, glass, shine)</li>
         </ul>
         <p>Starting at: $150</p>
+        <p id="disclaimer3" class="disclaimer">Los precios están sujetos a cambios dependiendo de las condiciones y circunstancias del vehículo.</p>
         <a href="https://form.jotform.com/251664414585159" target="_blank">Book Now</a>
       </div>
     </div>
@@ -197,7 +205,7 @@
       document.getElementById("sedan-title").innerText = isSpanish ? "Sedanes - Detallado Básico" : "Sedans - Basic Detail";
       document.getElementById("suv-title").innerText = isSpanish ? "SUV - Detallado Básico" : "SUV - Basic Detail";
       document.getElementById("truck-title").innerText = isSpanish ? "Camiones - Detallado Básico" : "Trucks - Basic Detail";
-      document.getElementById("price1-label").innerText = isSpanish ? "Precio inicial:" : "Starting at:";
+      document.getElementById("price1-label").innerText = isSpanish ? "Precio inicial: $90" : "Starting at: $90";
 
       const servicesEN = ["Vacuum seats and carpets", "Complete cleaning", "Interior dressing (plastic, console, doors)", "Air freshener (optional)", "Exterior detail (wheels, glass, shine)"];
       const servicesES = ["Aspirado de asientos y alfombras", "Limpieza completa", "Vestido interior (plásticos, consola, puertas)", "Ambientador (opcional)", "Detalle exterior (llantas, vidrios, brillo)"];
@@ -213,6 +221,14 @@
       document.getElementById("x3").innerText = isSpanish ? "Remover window tint" : "Window Tint Removal";
       document.getElementById("x4").innerText = isSpanish ? "Aplicación de cera" : "Wax Application";
       document.getElementById("contact-title").innerText = isSpanish ? "Contacto" : "Contact";
+
+      const disclaimerText = isSpanish
+        ? "Los precios están sujetos a cambios dependiendo de las condiciones y circunstancias del vehículo."
+        : "Prices are subject to change depending on the vehicle’s condition and circumstances.";
+
+      document.getElementById("disclaimer1").innerText = disclaimerText;
+      document.getElementById("disclaimer2").innerText = disclaimerText;
+      document.getElementById("disclaimer3").innerText = disclaimerText;
     }
   </script>
 </body>
