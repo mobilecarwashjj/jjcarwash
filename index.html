@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,7 +47,7 @@
       justify-content: center;
       gap: 20px;
       padding: 40px 20px;
-      background: #000;
+      background: #fff; /* fondo blanco detrás de las tarjetas */
     }
 
     .card {
@@ -58,7 +59,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 420px;
+      height: 440px;
       position: relative;
     }
 
@@ -73,9 +74,16 @@
       position: relative;
       padding: 20px;
       z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
     }
 
-    .card h3, .card ul, .card p, .card a {
+    .card h3,
+    .card ul,
+    .card p,
+    .card a {
       margin: 0 0 10px 0;
       color: white;
     }
@@ -90,13 +98,17 @@
       padding: 10px;
       text-decoration: none;
       border-radius: 5px;
-      display: inline-block;
+      display: block;
+      text-align: center;
+      margin: auto;
+      width: 120px;
     }
 
     .card .disclaimer {
       font-size: 0.8em;
-      margin-top: -5px;
-      margin-bottom: 10px;
+      text-align: center;
+      color: white;
+      margin-top: 10px;
     }
 
     section.services {
@@ -150,49 +162,61 @@
   <section class="cards">
     <div class="card" style="background-image: url('https://cdn.pixabay.com/photo/2017/03/27/14/56/auto-2179220_1280.jpg');">
       <div class="card-content">
-        <h3 id="sedan-title">Sedans - Basic Detail</h3>
-        <ul>
-          <li id="s1">Vacuum seats and carpets</li>
-          <li id="s2">Complete cleaning</li>
-          <li id="s3">Interior dressing (plastic, console, doors)</li>
-          <li id="s4">Air freshener (optional)</li>
-          <li id="s5">Exterior detail (wheels, glass, shine)</li>
-        </ul>
-        <p id="price1-label">Starting at: $90</p>
-        <p id="disclaimer1" class="disclaimer">Los precios están sujetos a cambios dependiendo de las condiciones y circunstancias del vehículo.</p>
-        <a id="book1" href="https://form.jotform.com/251664414585159" target="_blank">Book Now</a>
+        <div>
+          <h3 id="sedan-title">Sedans - Basic Detail</h3>
+          <ul>
+            <li id="s1">Vacuum seats and carpets</li>
+            <li id="s2">Complete cleaning</li>
+            <li id="s3">Interior dressing (plastic, console, doors)</li>
+            <li id="s4">Air freshener (optional)</li>
+            <li id="s5">Exterior detail (wheels, glass, shine)</li>
+          </ul>
+          <p id="price1-label">Starting at: $90</p>
+        </div>
+        <div>
+          <a id="book1" href="https://form.jotform.com/251664414585159" target="_blank">Book Now</a>
+          <p id="disclaimer1" class="disclaimer">Prices are subject to change depending on the vehicle’s condition and circumstances.</p>
+        </div>
       </div>
     </div>
 
     <div class="card" style="background-image: url('https://cdn.pixabay.com/photo/2015/01/19/13/51/car-604019_1280.jpg');">
       <div class="card-content">
-        <h3 id="suv-title">SUV - Basic Detail</h3>
-        <ul>
-          <li id="s6">Vacuum seats and carpets</li>
-          <li id="s7">Complete cleaning</li>
-          <li id="s8">Interior dressing (plastic, console, doors)</li>
-          <li id="s9">Air freshener (optional)</li>
-          <li id="s10">Exterior detail (wheels, glass, shine)</li>
-        </ul>
-        <p>Starting at: $120</p>
-        <p id="disclaimer2" class="disclaimer">Los precios están sujetos a cambios dependiendo de las condiciones y circunstancias del vehículo.</p>
-        <a href="https://form.jotform.com/251664414585159" target="_blank">Book Now</a>
+        <div>
+          <h3 id="suv-title">SUV - Basic Detail</h3>
+          <ul>
+            <li id="s6">Vacuum seats and carpets</li>
+            <li id="s7">Complete cleaning</li>
+            <li id="s8">Interior dressing (plastic, console, doors)</li>
+            <li id="s9">Air freshener (optional)</li>
+            <li id="s10">Exterior detail (wheels, glass, shine)</li>
+          </ul>
+          <p>Starting at: $120</p>
+        </div>
+        <div>
+          <a href="https://form.jotform.com/251664414585159" target="_blank">Book Now</a>
+          <p id="disclaimer2" class="disclaimer">Prices are subject to change depending on the vehicle’s condition and circumstances.</p>
+        </div>
       </div>
     </div>
 
-    <div class="card" style="background-image: url('https://cdn.pixabay.com/photo/2016/12/18/18/42/pickup-truck-1919006_1280.jpg');">
+    <div class="card" style="background-image: url('https://cdn.pixabay.com/photo/2015/01/19/13/51/pickup-604020_1280.jpg');">
       <div class="card-content">
-        <h3 id="truck-title">Trucks - Basic Detail</h3>
-        <ul>
-          <li id="s11">Vacuum seats and carpets</li>
-          <li id="s12">Complete cleaning</li>
-          <li id="s13">Interior dressing (plastic, console, doors)</li>
-          <li id="s14">Air freshener (optional)</li>
-          <li id="s15">Exterior detail (wheels, glass, shine)</li>
-        </ul>
-        <p>Starting at: $150</p>
-        <p id="disclaimer3" class="disclaimer">Los precios están sujetos a cambios dependiendo de las condiciones y circunstancias del vehículo.</p>
-        <a href="https://form.jotform.com/251664414585159" target="_blank">Book Now</a>
+        <div>
+          <h3 id="truck-title">Trucks - Basic Detail</h3>
+          <ul>
+            <li id="s11">Vacuum seats and carpets</li>
+            <li id="s12">Complete cleaning</li>
+            <li id="s13">Interior dressing (plastic, console, doors)</li>
+            <li id="s14">Air freshener (optional)</li>
+            <li id="s15">Exterior detail (wheels, glass, shine)</li>
+          </ul>
+          <p>Starting at: $150</p>
+        </div>
+        <div>
+          <a href="https://form.jotform.com/251664414585159" target="_blank">Book Now</a>
+          <p id="disclaimer3" class="disclaimer">Prices are subject to change depending on the vehicle’s condition and circumstances.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -255,5 +279,4 @@
   </script>
 </body>
 </html>
-
 
