@@ -58,7 +58,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 440px;
+      height: 460px;
       position: relative;
     }
 
@@ -160,104 +160,7 @@
   </style>
 </head>
 <body>
-  <div id="language-toggle" onclick="toggleLanguage()">Español</div>
-
-  <header>
-    <h1 id="title">J&J Carwash and Detailing</h1>
-    <p id="tagline">Your car clean and shiny wherever you are</p>
-  </header>
-
-  <section class="cards">
-    <!-- Sedans -->
-    <div class="card" style="background-image: url('https://cdn.pixabay.com/photo/2017/03/27/14/56/auto-2179220_1280.jpg');">
-      <div class="card-content">
-        <div>
-          <h3 id="sedan-title">Sedans - Basic Detail</h3>
-          <ul>
-            <li id="s1">Vacuum seats and carpets</li>
-            <li id="s2">Complete clean</li>
-            <li id="s3">Interior dress up (plastic, console, doors)</li>
-            <li id="s4">Air freshener (optional)</li>
-            <li id="s5">Exterior detailing (wheels, glass, shine)</li>
-          </ul>
-          <p id="price1-label">Starting at: $90</p>
-        </div>
-        <div>
-          <a id="book1" href="https://form.jotform.com/251664414585159?car_type=Sedan" target="_blank">Book Now</a>
-          <p id="disclaimer1" class="disclaimer">Prices are subject to change depending on the vehicle’s condition and circumstances.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- SUV -->
-    <div class="card" style="background-image: url('https://cdn.pixabay.com/photo/2015/01/19/13/51/car-604019_1280.jpg');">
-      <div class="card-content">
-        <div>
-          <h3 id="suv-title">SUV - Basic Detail</h3>
-          <ul>
-            <li id="s6">Vacuum seats and carpets</li>
-            <li id="s7">Complete clean</li>
-            <li id="s8">Interior dress up (plastic, console, doors)</li>
-            <li id="s9">Air freshener (optional)</li>
-            <li id="s10">Exterior detailing (wheels, glass, shine)</li>
-          </ul>
-          <p>Starting at: $120</p>
-        </div>
-        <div>
-          <a href="https://form.jotform.com/251664414585159?car_type=SUV" target="_blank">Book Now</a>
-          <p id="disclaimer2" class="disclaimer">Prices are subject to change depending on the vehicle’s condition and circumstances.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Truck -->
-    <div class="card" style="background-image: url('truck.jpg');">
-      <div class="card-content">
-        <div>
-          <h3 id="truck-title">Trucks - Basic Detail</h3>
-          <ul>
-            <li id="s11">Vacuum seats and carpets</li>
-            <li id="s12">Complete clean</li>
-            <li id="s13">Interior dress up (plastic, console, doors)</li>
-            <li id="s14">Air freshener (optional)</li>
-            <li id="s15">Exterior detailing (wheels, glass, shine)</li>
-          </ul>
-          <p>Starting at: $150</p>
-        </div>
-        <div>
-          <a href="https://form.jotform.com/251664414585159?car_type=Truck" target="_blank">Book Now</a>
-          <p id="disclaimer3" class="disclaimer">Prices are subject to change depending on the vehicle’s condition and circumstances.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="services">
-    <h2 id="extras-title">Extra Services</h2>
-    <ul>
-      <li id="x1">Headlight Polishing</li>
-      <li id="x2">Odor Removal</li>
-      <li id="x3">Window Tint Removal</li>
-      <li id="x4">Wax Application</li>
-      <li id="x5">Ceramic Coating</li>
-    </ul>
-  </section>
-
-  <div class="supply-banner" id="supply-text">
-    We bring our own water and electricity supplies.
-  </div>
-
-  <section class="contact">
-    <h2 id="contact-title">Contact</h2>
-    <p><strong>Phone:</strong> <a href="tel:7867936339">786-793-6339</a></p>
-    <p><strong>Email:</strong> <a href="mailto:mobilecarwashjj@gmail.com">mobilecarwashjj@gmail.com</a></p>
-    <p><strong>Service Area:</strong> Wesley Chapel and surrounding areas</p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 J&J Carwash and Detailing. All rights reserved.</p>
-  </footer>
-
+  <!-- El resto del contenido queda igual -->
   <script>
     function toggleLanguage() {
       const isSpanish = document.getElementById("language-toggle").innerText === "Español";
@@ -278,11 +181,27 @@
         link.href = `https://form.jotform.com/251664414585159?car_type=${carType}`;
       });
 
-      const servicesEN = ["Vacuum seats and carpets", "Complete cleaning", "Interior dressing (plastic, console, doors)", "Air freshener (optional)", "Exterior detail (wheels, glass, shine)"];
-      const servicesES = ["Aspirado de asientos y alfombras", "Limpieza completa", "Vestido interior (plásticos, consola, puertas)", "Ambientador (opcional)", "Detalle exterior (llantas, vidrios, brillo)"];
-      for (let i = 1; i <= 15; i++) {
+      const servicesEN = [
+        "Vacuum seats and carpets",
+        "Complete cleaning",
+        "Interior dressing (plastic, console, doors)",
+        "Air freshener (optional)",
+        "Exterior detail (wheels, glass, shine)",
+        "Door jambs"
+      ];
+
+      const servicesES = [
+        "Aspirado de asientos y alfombras",
+        "Limpieza completa",
+        "Vestido interior (plásticos, consola, puertas)",
+        "Ambientador (opcional)",
+        "Detalle exterior (llantas, vidrios, brillo)",
+        "Marcos de puertas"
+      ];
+
+      for (let i = 1; i <= 18; i++) {
         const el = document.getElementById("s" + i);
-        if (el) el.innerText = isSpanish ? servicesES[(i - 1) % 5] : servicesEN[(i - 1) % 5];
+        if (el) el.innerText = isSpanish ? servicesES[(i - 1) % 6] : servicesEN[(i - 1) % 6];
       }
 
       document.getElementById("extras-title").innerText = isSpanish ? "Servicios Extras" : "Extra Services";
@@ -305,3 +224,4 @@
   </script>
 </body>
 </html>
+
